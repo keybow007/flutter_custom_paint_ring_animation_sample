@@ -18,7 +18,7 @@ class RingAnimationWidget extends StatefulWidget {
 //https://api.flutter.dev/flutter/animation/AnimationController-class.html
 class _RingAnimationWidgetState extends State<RingAnimationWidget>
     with SingleTickerProviderStateMixin {
-  AnimationController _circleAnimController;
+  late AnimationController _circleAnimController;
 
   @override
   void initState() {
@@ -44,7 +44,7 @@ class _RingAnimationWidgetState extends State<RingAnimationWidget>
         //https://www.weblio.jp/content/%E5%86%86%E5%BD%A2%E3%82%B0%E3%83%A9%E3%83%87%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3
         gradient: RadialGradient(
           colors: [
-            Colors.orange[800].withOpacity(0.5),
+            Colors.orange[800]!.withOpacity(0.5),
             Colors.black.withOpacity(0.2),
           ],
         ),

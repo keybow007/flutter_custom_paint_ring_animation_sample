@@ -8,13 +8,13 @@ class RingPainter extends CustomPainter {
   final Paint circlePaint;
 
   RingPainter({
-    this.circleAnimation,
-    this.count,
+    required this.circleAnimation,
+    required this.count,
   })  : circlePaint = Paint()
           //PaintingStyle: fillは塗りつぶし、strokeは輪郭のみ
           ..style = PaintingStyle.stroke
           ..strokeWidth = 5
-          ..color = Colors.orange[700]
+          ..color = Colors.orange[700]!
           ..blendMode = BlendMode.screen,
         super(repaint: circleAnimation);
 
